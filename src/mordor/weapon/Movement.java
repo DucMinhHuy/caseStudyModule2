@@ -1,28 +1,28 @@
-package controller.weapon;
+package mordor.weapon;
 
 public class Movement extends Weapon {
     //giay toc chay
-    private double Armor;
+    private double ArmorWeapon;
     private double MagicDefensed; //khang phep
     private double MovementSpeed;//% di chuyen
-    private int AbilityPower;
-    private double AttackSpeep;// toc do danh
+    private int AbilityPowerWeapon;
+    private double AttackSpeedWeapon;// toc do danh
 
-    public Movement(String name, double CoolDownReduction, double armor, double magicDefensed, double movementSpeed, int abilityPower, double attackSpeep) {
-        super(name, CoolDownReduction);
-        Armor = armor;
+    public Movement(String name, double coolDownReduction, double armorWeapon, double magicDefensed, double movementSpeed, int abilityPowerWeapon, double attackSpeedWeapon) {
+        super(name, coolDownReduction);
+        ArmorWeapon = armorWeapon;
         MagicDefensed = magicDefensed;
         MovementSpeed = movementSpeed;
-        AbilityPower = abilityPower;
-        AttackSpeep = attackSpeep;
+        AbilityPowerWeapon = abilityPowerWeapon;
+        AttackSpeedWeapon = attackSpeedWeapon;
     }
 
     public double getArmor() {
-        return Armor;
+        return ArmorWeapon;
     }
 
     public void setArmor(double armor) {
-        Armor = armor;
+        ArmorWeapon = armor;
     }
 
     public double getMagicDefense() {
@@ -42,18 +42,18 @@ public class Movement extends Weapon {
     }
 
     public int getAbilityPower() {
-        return AbilityPower;
+        return AbilityPowerWeapon;
     }
 
     public void setAbilityPower(int abilityPower) {
-        AbilityPower = abilityPower;
+        AbilityPowerWeapon = abilityPower;
     }
 
     public double getAttackSpeep() {
-        return AttackSpeep;
+        return AttackSpeedWeapon;
     }
 
     public void setAttackSpeep(double attackSpeep) {
-        AttackSpeep = attackSpeep;
+        AttackSpeedWeapon = attackSpeep;
     }
 }

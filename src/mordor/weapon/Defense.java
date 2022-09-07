@@ -1,27 +1,27 @@
-package controller.weapon;
+package mordor.weapon;
 
 public class Defense extends Weapon{
-    private double Armor;
+    private double ArmorWeapon;
     private double Hp;
     private double HealPerSecond;//hoi tren giay
-    private int Mana;
+    private int ManaWeapon;
     private double MagicDefensed;// khang phep
 
-    public Defense(String name, double CoolDownReduction, double armor, double hp, double healPerSecond, int mana, double magicDefensed) {
-        super(name, CoolDownReduction);
-        Armor = armor;
+    public Defense(String name, double coolDownReduction, double armorWeapon, double hp, double healPerSecond, int manaWeapon, double magicDefensed) {
+        super(name, coolDownReduction);
+        ArmorWeapon = armorWeapon;
         Hp = hp;
         HealPerSecond = healPerSecond;
-        Mana = mana;
+        ManaWeapon = manaWeapon;
         MagicDefensed = magicDefensed;
     }
 
     public double getArmor() {
-        return Armor;
+        return ArmorWeapon;
     }
 
     public void setArmor(double armor) {
-        Armor = armor;
+        ArmorWeapon = armor;
     }
 
     public double getHp() {
@@ -41,11 +41,11 @@ public class Defense extends Weapon{
     }
 
     public int getMana() {
-        return Mana;
+        return ManaWeapon;
     }
 
     public void setMana(int mana) {
-        Mana = mana;
+        ManaWeapon = mana;
     }
 
     public double getMagicDefense() {

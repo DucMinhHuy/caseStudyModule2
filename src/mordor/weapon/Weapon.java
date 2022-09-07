@@ -1,13 +1,13 @@
-package controller.weapon;
+package mordor.weapon;
 
 public class Weapon {
     private String Name;
     private double CoolDownReduction;
     public Weapon(){};
 
-    public Weapon(String name, double coolDown) {
+    public Weapon(String name, double coolDownReduction) {
         Name = name;
-        CoolDownReduction = coolDown;
+        CoolDownReduction = coolDownReduction;// hoio chieu
     }
 
     public String getName() {

@@ -1,10 +1,22 @@
-package controller.hero;
+package mordor.hero;
 
 public class Mage extends Hero{
     private int AbilityPower;// phep
     private double MagicPierce;//xuyen giap phep
     private double MagicLifeSteal;// hut mau phep
-    public Mage(){};
+    public Mage(){}
+
+    @Override
+    public double buy() {
+        return 0;
+    }
+
+    @Override
+    public double add() {
+        return 0;
+    }
+
+    ;
     public Mage(String name, int birthDay, double height, double hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, int abilityPower, double magicPierce, double magicLifeSteal) {
         super(name, birthDay, height, hp, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
         AbilityPower = abilityPower;

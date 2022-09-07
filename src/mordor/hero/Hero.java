@@ -1,6 +1,6 @@
-package controller.hero;
+package mordor.hero;
 
-public class Hero {
+public abstract class Hero {
     private String Name;
     private int BirthDay;
     private double Height;
@@ -16,6 +16,8 @@ public class Hero {
     private double HealPerSecondMana;
     private double HealPerSecondHp;
     public Hero(){};
+    public abstract double buy();
+    public abstract double add();
     public Hero(String name, int birthDay, double height, double hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp) {
         Name = name;
         BirthDay = birthDay;

@@ -1,19 +1,21 @@
-package controller.weapon;
+package mordor.weapon;
 
 public class PhysicalAttack extends Weapon{
     private int NormalAttack;
     private double Hp;
     private double Critical;
-    private double AttackSpeel;
+    private double AttackSpeedWeapon;
     private double CriticalDam;
+    private double LifeSteadsWeapon;
 
-    public PhysicalAttack(String name, double CoolDownReduction, int normalAttack, double hp, double critical, double attackSpeel, double criticalDam) {
-        super(name, CoolDownReduction);
+    public PhysicalAttack(String name, double coolDownReduction, int normalAttack, double hp, double critical, double attackSpeedWeapon, double criticalDam, double lifeSteadsWeapon) {
+        super(name, coolDownReduction);
         NormalAttack = normalAttack;
         Hp = hp;
         Critical = critical;
-        AttackSpeel = attackSpeel;
+        AttackSpeedWeapon = attackSpeedWeapon;
         CriticalDam = criticalDam;
+        LifeSteadsWeapon = lifeSteadsWeapon;
     }
 
     public int getNormalAttack() {
@@ -40,12 +42,12 @@ public class PhysicalAttack extends Weapon{
         Critical = critical;
     }
 
-    public double getAttackSpeel() {
-        return AttackSpeel;
+    public double getAttackSpeedWeapon() {
+        return AttackSpeedWeapon;
     }
 
-    public void setAttackSpeel(double attackSpeel) {
-        AttackSpeel = attackSpeel;
+    public void setAttackSpeedWeapon(double attackSpeedWeapon) {
+        AttackSpeedWeapon = attackSpeedWeapon;
     }
 
     public double getCriticalDam() {
@@ -54,5 +56,13 @@ public class PhysicalAttack extends Weapon{
 
     public void setCriticalDam(double criticalDam) {
         CriticalDam = criticalDam;
+    }
+
+    public double getLifeSteadsWeapon() {
+        return LifeSteadsWeapon;
+    }
+
+    public void setLifeSteadsWeapon(double lifeSteadsWeapon) {
+        LifeSteadsWeapon = lifeSteadsWeapon;
     }
 }

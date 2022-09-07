@@ -1,4 +1,4 @@
-package controller.hero;
+package mordor.hero;
 
 public class Warrior extends Hero{
     private double CriticalChance;// ti le tri mang
@@ -34,5 +34,15 @@ public class Warrior extends Hero{
 
     public void setLifeSteal(double lifeSteal) {
         this.lifeSteal = lifeSteal;
+    }
+
+    @Override
+    public double buy() {
+        return 0;
+    }
+
+    @Override
+    public double add() {
+        return 0;
     }
 }

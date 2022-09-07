@@ -1,16 +1,16 @@
-package controller.weapon;
+package mordor.weapon;
 
 public class Support extends Weapon{
     private double Hp;
     private double MovementSpeed;// % di chuyen
-    private int AbilityMagic;
+    private int AbilityPowerWeapon;
     private int NormalAttack;//cong vat ly
 
-    public Support(String name, double CoolDownReduction, double hp, double movementSpeed, int abilityMagic, int normalAttack) {
-        super(name, CoolDownReduction);
+    public Support(String name, double coolDownReduction, double hp, double movementSpeed, int abilityPowerWeapon, int normalAttack) {
+        super(name, coolDownReduction);
         Hp = hp;
         MovementSpeed = movementSpeed;
-        AbilityMagic = abilityMagic;
+        AbilityPowerWeapon = abilityPowerWeapon;
         NormalAttack = normalAttack;
     }
 
@@ -31,11 +31,11 @@ public class Support extends Weapon{
     }
 
     public int getAbilityMagic() {
-        return AbilityMagic;
+        return AbilityPowerWeapon;
     }
 
     public void setAbilityMagic(int abilityMagic) {
-        AbilityMagic = abilityMagic;
+        AbilityPowerWeapon = abilityMagic;
     }
 
     public int getNormalAttack() {
