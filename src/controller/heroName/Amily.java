@@ -1,7 +1,6 @@
 package controller.heroName;
-import controller.vukhi.Longinus;
-import mordor.hero.Warrior;
-import mordor.methods.*;
+import model.hero.Warrior;
+import model.methods.*;
 import controller.listWeapons.WeaponsDam;
 
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package controller.vukhi;
 
-import mordor.weapon.Movement;
-import mordor.weapon.PhysicalAttack;
+import model.weapon.Movement;
+import model.weapon.PhysicalAttack;
 
 public class HolySword {
     private PhysicalAttack physicalAttack;

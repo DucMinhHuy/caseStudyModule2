@@ -35,4 +35,13 @@ public class MotaWeapon {
     public void setCri(double cri) {
         Cri = cri;
     }
+
+    @Override
+    public String toString() {
+        return "MotaWeapon{" +
+                "name='" + name + '\'' +
+                ", coolDown=" + coolDown +
+                ", Cri=" + Cri +
+                '}';
+    }
 }
