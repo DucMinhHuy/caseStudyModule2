@@ -1,6 +1,8 @@
 package model;
 
-public abstract class Hero {
+import java.io.Serializable;
+
+public abstract class Hero implements Serializable {
     private String Name;
     private int BirthDay;
     private double Height;

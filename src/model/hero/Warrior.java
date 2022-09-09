@@ -2,7 +2,9 @@ package model.hero;
 
 import model.Hero;
 
-public class Warrior extends Hero {
+import java.io.Serializable;
+
+public class Warrior extends Hero implements Serializable {
     private double CriticalChance=0;// ti le tri mang
     private double CriticalDamage=0;// sat thuong chi mang
     private double lifeSteal=0;//hut mau

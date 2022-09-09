@@ -1,6 +1,8 @@
 package model.methods;
 
-public interface ICriticalDamage {
+import java.io.Serializable;
+
+public interface ICriticalDamage extends Serializable {
      double criticalDamage(double CriticalDam,double criticalDam);
         //baseDamage of hero
 //        return baseDamage*CriticalDamage/100+baseDamage*CriticalDam/100;

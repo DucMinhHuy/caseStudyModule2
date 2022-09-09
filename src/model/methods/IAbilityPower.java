@@ -1,6 +1,8 @@
 package model.methods;
 
-public interface IAbilityPower {
+import java.io.Serializable;
+
+public interface IAbilityPower extends Serializable {
     int abilityPower(int AbilityPowerWeapon,int abilityPower);
     //return AbilityPower+AbilityPowerWeapon;
 

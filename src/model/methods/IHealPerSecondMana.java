@@ -1,6 +1,8 @@
 package model.methods;
 
-public interface IHealPerSecondMana {
+import java.io.Serializable;
+
+public interface IHealPerSecondMana extends Serializable {
     double healPerSecondMana(double HealPerSecondMana,double healPerSecondMana);
 //        return HealPerSecond+HealPerSecondMana;
 

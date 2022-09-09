@@ -2,7 +2,9 @@ package model.weapon;
 
 import model.Weapon;
 
-public class Defense extends Weapon {
+import java.io.Serializable;
+
+public class Defense extends Weapon implements Serializable {
     private double ArmorWeapon=0;
     private double Hp=0;
     private double HealPerSecond=0;//hoi tren giay

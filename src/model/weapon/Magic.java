@@ -2,7 +2,9 @@ package model.weapon;
 
 import model.Weapon;
 
-public class Magic extends Weapon {
+import java.io.Serializable;
+
+public class Magic extends Weapon implements Serializable {
     private int AbilityPowerWeapon=0;// suc manh phep thuat
     private double Hp=0;
     private int ManaWeapon=0;

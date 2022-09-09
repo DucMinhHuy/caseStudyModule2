@@ -3,7 +3,9 @@ package model.hero;
 import model.Hero;
 import model.weapon.PhysicalAttack;
 
-public class Assassin extends Hero {
+import java.io.Serializable;
+
+public class Assassin extends Hero implements Serializable {
     private double LifeSteal=0;//hut mau
     private double CriticalChance=0;//ti le tri mang
     private double CriticalDamage=0;// sat thuong tri mang

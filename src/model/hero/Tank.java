@@ -2,7 +2,9 @@ package model.hero;
 
 import model.Hero;
 
-public class Tank extends Hero {
+import java.io.Serializable;
+
+public class Tank extends Hero implements Serializable {
     public Tank(){}
 
     @Override

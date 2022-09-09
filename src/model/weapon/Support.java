@@ -2,7 +2,9 @@ package model.weapon;
 
 import model.Weapon;
 
-public class Support extends Weapon {
+import java.io.Serializable;
+
+public class Support extends Weapon implements Serializable {
     private double Hp=0;
     private double MovementSpeed=0;// % di chuyen
     private int AbilityPowerWeapon=0;

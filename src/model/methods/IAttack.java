@@ -1,6 +1,8 @@
 package model.methods;
 
-public interface IAttack {
+import java.io.Serializable;
+
+public interface IAttack extends Serializable {
     int attack(int normalAttack, int baseDam);
 //        return baseDamage+normalAttack;
 

@@ -3,7 +3,9 @@ package model.weapon.describe;
 import model.weapon.Movement;
 import model.weapon.PhysicalAttack;
 
-public class WeaponDescription {
+import java.io.Serializable;
+
+public class WeaponDescription implements Serializable {
     private PhysicalAttack physicalAttack;
     private Movement movement;
     private static int money=0;

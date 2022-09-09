@@ -1,5 +1,7 @@
 package model.methods;
 
-public interface IMana {
+import java.io.Serializable;
+
+public interface IMana extends Serializable {
     int mana(int mana,int Mana);
 }

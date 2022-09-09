@@ -1,7 +1,10 @@
 package model.hero.describe;
 
 import model.hero.Assassin;
-public class HeroDescription{
+
+import java.io.Serializable;
+
+public class HeroDescription implements Serializable {
     private Assassin assassin;
     private static int money=0;
     public HeroDescription(){}

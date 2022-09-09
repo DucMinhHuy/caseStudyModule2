@@ -1,6 +1,8 @@
 package model;
 
-public class Weapon {
+import java.io.Serializable;
+
+public class Weapon implements Serializable {
     private String Name;
     private double CoolDownReduction=0;
     public Weapon(){};

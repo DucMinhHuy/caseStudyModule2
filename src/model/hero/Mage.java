@@ -2,7 +2,9 @@ package model.hero;
 
 import model.Hero;
 
-public class Mage extends Hero {
+import java.io.Serializable;
+
+public class Mage extends Hero implements Serializable {
     private int AbilityPower=0;// phep
     private double MagicPierce=0;//xuyen giap phep
     private double MagicLifeSteal=0;// hut mau phep

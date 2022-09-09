@@ -1,6 +1,8 @@
 package model.methods;
 
-public interface IHp {
+import java.io.Serializable;
+
+public interface IHp extends Serializable {
     int hp(int Hp,int hitPonit);
     //return HitPoint+Hp;
 }

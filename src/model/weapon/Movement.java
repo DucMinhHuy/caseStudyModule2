@@ -2,7 +2,9 @@ package model.weapon;
 
 import model.Weapon;
 
-public class Movement extends Weapon {
+import java.io.Serializable;
+
+public class Movement extends Weapon implements Serializable {
     //giay toc chay
     private double ArmorWeapon=0;
     private double MagicDefensed=0; //khang phep
