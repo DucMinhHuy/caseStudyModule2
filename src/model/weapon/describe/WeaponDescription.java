@@ -1,15 +1,16 @@
-package controller.vukhi;
+package model.weapon.describe;
+
 import model.weapon.Movement;
 import model.weapon.PhysicalAttack;
-public class Longinus {
+
+public class WeaponDescription {
     private PhysicalAttack physicalAttack;
     private Movement movement;
-    private int money=3000;
-
-    public  Longinus() {
+    private static int money=0;
+    public WeaponDescription() {
     }
 
-    public Longinus(PhysicalAttack physicalAttack, Movement movement, int money) {
+    public WeaponDescription(PhysicalAttack physicalAttack, Movement movement, int money) {
         this.physicalAttack = physicalAttack;
         this.movement = movement;
         this.money = money;
@@ -41,8 +42,7 @@ public class Longinus {
 
     @Override
     public String toString() {
-        return "Longinus{" +super.toString()+
-                "physicalAttack=" + physicalAttack +
+        return "physicalAttack"+'{' + physicalAttack +
                 ", movement=" + movement +
                 ", money=" + money +
                 '}';

@@ -1,6 +1,8 @@
 package model.hero;
 
-public class Tank extends Hero{
+import model.Hero;
+
+public class Tank extends Hero {
     public Tank(){}
 
     @Override

@@ -1,13 +1,15 @@
 package model.weapon;
 
+import model.Weapon;
+
 public class Movement extends Weapon {
     //giay toc chay
-    private double ArmorWeapon;
-    private double MagicDefensed; //khang phep
-    private double MovementSpeed;//% di chuyen
-    private int AbilityPowerWeapon;
-    private double AttackSpeedWeapon;// toc do danh
-
+    private double ArmorWeapon=0;
+    private double MagicDefensed=0; //khang phep
+    private double MovementSpeed=0;//% di chuyen
+    private int AbilityPowerWeapon=0;
+    private double AttackSpeedWeapon=0;// toc do danh
+public Movement(){}
     public Movement(String name, double coolDownReduction, double armorWeapon, double magicDefensed, double movementSpeed, int abilityPowerWeapon, double attackSpeedWeapon) {
         super(name, coolDownReduction);
         ArmorWeapon = armorWeapon;
@@ -59,12 +61,10 @@ public class Movement extends Weapon {
 
     @Override
     public String toString() {
-        return "Movement{" +super.toString()+
-                "ArmorWeapon=" + ArmorWeapon +
+        return "ArmorWeapon=" + ArmorWeapon +
                 ", MagicDefensed=" + MagicDefensed +
                 ", MovementSpeed=" + MovementSpeed +
                 ", AbilityPowerWeapon=" + AbilityPowerWeapon +
-                ", AttackSpeedWeapon=" + AttackSpeedWeapon +
-                '}';
+                ", AttackSpeedWeapon=" + AttackSpeedWeapon;
     }
 }

@@ -1,8 +1,8 @@
-package model.weapon;
+package model;
 
 public class Weapon {
     private String Name;
-    private double CoolDownReduction;
+    private double CoolDownReduction=0;
     public Weapon(){};
 
     public Weapon(String name, double coolDownReduction) {
@@ -28,8 +28,7 @@ public class Weapon {
 
     @Override
     public String toString() {
-        return "Weapon{" +
-                "Name='" + Name + '\'' +
+        return "Name='" + Name + '\'' +
                 ", CoolDownReduction=" + CoolDownReduction +
                 '}';
     }

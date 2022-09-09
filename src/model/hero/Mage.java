@@ -1,9 +1,11 @@
 package model.hero;
 
-public class Mage extends Hero{
-    private int AbilityPower;// phep
-    private double MagicPierce;//xuyen giap phep
-    private double MagicLifeSteal;// hut mau phep
+import model.Hero;
+
+public class Mage extends Hero {
+    private int AbilityPower=0;// phep
+    private double MagicPierce=0;//xuyen giap phep
+    private double MagicLifeSteal=0;// hut mau phep
     public Mage(){}
 
     @Override

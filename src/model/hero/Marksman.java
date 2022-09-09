@@ -1,11 +1,13 @@
 package model.hero;
 
-public class Marksman extends Hero{
-    private double LifeSteal;//hut mau
-    private double Acceleration;// toc chay
-    private double ArmorPierce;// xuyen giap
-    private double CriticalChance;//ti le tri mang
-    private double CriticalDamage;// sat thuong tri mang
+import model.Hero;
+
+public class Marksman extends Hero {
+    private double LifeSteal=0;//hut mau
+    private double Acceleration=0;// toc chay
+    private double ArmorPierce=0;// xuyen giap
+    private double CriticalChance=0;//ti le tri mang
+    private double CriticalDamage=0;// sat thuong tri mang
 
     public Marksman(){}
 

@@ -1,10 +1,12 @@
 package model.weapon;
 
-public class Support extends Weapon{
-    private double Hp;
-    private double MovementSpeed;// % di chuyen
-    private int AbilityPowerWeapon;
-    private int NormalAttack;//cong vat ly
+import model.Weapon;
+
+public class Support extends Weapon {
+    private double Hp=0;
+    private double MovementSpeed=0;// % di chuyen
+    private int AbilityPowerWeapon=0;
+    private int NormalAttack=0;//cong vat ly
 
     public Support(String name, double coolDownReduction, double hp, double movementSpeed, int abilityPowerWeapon, int normalAttack) {
         super(name, coolDownReduction);

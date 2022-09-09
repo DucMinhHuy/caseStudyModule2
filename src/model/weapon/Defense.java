@@ -1,11 +1,13 @@
 package model.weapon;
 
-public class Defense extends Weapon{
-    private double ArmorWeapon;
-    private double Hp;
-    private double HealPerSecond;//hoi tren giay
-    private int ManaWeapon;
-    private double MagicDefensed;// khang phep
+import model.Weapon;
+
+public class Defense extends Weapon {
+    private double ArmorWeapon=0;
+    private double Hp=0;
+    private double HealPerSecond=0;//hoi tren giay
+    private int ManaWeapon=0;
+    private double MagicDefensed=0;// khang phep
 
     public Defense(String name, double coolDownReduction, double armorWeapon, double hp, double healPerSecond, int manaWeapon, double magicDefensed) {
         super(name, coolDownReduction);

@@ -1,12 +1,14 @@
 package model.weapon;
 
-public class Magic extends Weapon{
-    private int AbilityPowerWeapon;// suc manh phep thuat
-    private double Hp;
-    private int ManaWeapon;
-    private double MovementSpeed;//% di chuyen
-    private double ArmorWeapon;
-    private double MagicPierceWeapon;
+import model.Weapon;
+
+public class Magic extends Weapon {
+    private int AbilityPowerWeapon=0;// suc manh phep thuat
+    private double Hp=0;
+    private int ManaWeapon=0;
+    private double MovementSpeed=0;//% di chuyen
+    private double ArmorWeapon=0;
+    private double MagicPierceWeapon=0;
 
     public Magic(String name, double coolDownReduction, int abilityPowerWeapon, double hp, int manaWeapon, double movementSpeed, double armorWeapon, double magicPierceWeapon) {
         super(name, coolDownReduction);

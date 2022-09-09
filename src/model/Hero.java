@@ -1,20 +1,20 @@
-package model.hero;
+package model;
 
 public abstract class Hero {
     private String Name;
     private int BirthDay;
     private double Height;
-    private int HitPoint;
-    private int BaseDamage=360;
-    private double CoolDown;//hoi chieu
-    private double Armor;
-    private double MagicDefense;//khang phep
-    private int Mana;
-    private double MovementSpeed=365.5;// toc do di chuyen
-    private double AttackSpeed;//toc do danh
-    private double CoolDownReduction=6;//giam thoi gian hoi chieu
-    private double HealPerSecondMana;
-    private double HealPerSecondHp;
+    private int HitPoint=0;
+    private int BaseDamage=0;
+    private double CoolDown=0;//hoi chieu
+    private double Armor=0;
+    private double MagicDefense=0;//khang phep
+    private int Mana=0;
+    private double MovementSpeed=0;// toc do di chuyen
+    private double AttackSpeed=0;//toc do danh
+    private double CoolDownReduction=0;//giam thoi gian hoi chieu
+    private double HealPerSecondMana=0;
+    private double HealPerSecondHp=0;
 //    private double Money;
     public Hero(){};
     public abstract void buy(double money);
@@ -74,8 +74,9 @@ public abstract class Hero {
         return BaseDamage;
     }
 
-    public void setBaseDamage(int baseDamage) {
+    public int setBaseDamage(int baseDamage) {
         BaseDamage = baseDamage;
+        return baseDamage;
     }
 
     public double getCoolDown() {
@@ -122,8 +123,9 @@ public abstract class Hero {
         return AttackSpeed;
     }
 
-    public void setAttackSpeed(double attackSpeed) {
-        AttackSpeed = attackSpeed;
+    public double setAttackSpeed(double attackSpeed) {
+        this.AttackSpeed = attackSpeed;
+        return attackSpeed;
     }
 
     public double getCoolDownReduction() {

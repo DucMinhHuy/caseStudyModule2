@@ -1,12 +1,24 @@
 package model.weapon;
 
-public class PhysicalAttack extends Weapon{
-    private int NormalAttack;
-    private double Hp;
-    private double Critical;
-    private double AttackSpeedWeapon;
-    private double CriticalDam;
-    private double LifeSteadsWeapon;
+import model.Weapon;
+
+public class PhysicalAttack extends Weapon {
+    private int NormalAttack=0;
+    private double Hp=0;
+    private double Critical=0;
+    private double AttackSpeedWeapon=0;
+    private double CriticalDam=0;
+    private double LifeSteadsWeapon=0;
+    public PhysicalAttack(){}
+
+    public PhysicalAttack(int normalAttack, double hp, double critical, double attackSpeedWeapon, double criticalDam, double lifeSteadsWeapon) {
+        NormalAttack = normalAttack;
+        Hp = hp;
+        Critical = critical;
+        AttackSpeedWeapon = attackSpeedWeapon;
+        CriticalDam = criticalDam;
+        LifeSteadsWeapon = lifeSteadsWeapon;
+    }
 
     public PhysicalAttack(String name, double coolDownReduction, int normalAttack, double hp, double critical, double attackSpeedWeapon, double criticalDam, double lifeSteadsWeapon) {
         super(name, coolDownReduction);
@@ -68,13 +80,10 @@ public class PhysicalAttack extends Weapon{
 
     @Override
     public String toString() {
-        return "PhysicalAttack{" +super.toString()+
-                "NormalAttack=" + NormalAttack +
-                ", Hp=" + Hp +
+        return super.toString()+" Hp=" + Hp +
                 ", Critical=" + Critical +
                 ", AttackSpeedWeapon=" + AttackSpeedWeapon +
                 ", CriticalDam=" + CriticalDam +
-                ", LifeSteadsWeapon=" + LifeSteadsWeapon +
-                '}';
+                ", LifeSteadsWeapon=" + LifeSteadsWeapon ;
     }
 }

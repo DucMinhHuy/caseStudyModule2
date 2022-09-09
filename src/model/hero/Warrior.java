@@ -1,9 +1,11 @@
 package model.hero;
 
-public class Warrior extends Hero{
-    private double CriticalChance;// ti le tri mang
-    private double CriticalDamage;// sat thuong chi mang
-    private double lifeSteal;//hut mau
+import model.Hero;
+
+public class Warrior extends Hero {
+    private double CriticalChance=0;// ti le tri mang
+    private double CriticalDamage=0;// sat thuong chi mang
+    private double lifeSteal=0;//hut mau
 
     public Warrior(){
 
