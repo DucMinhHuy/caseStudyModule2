@@ -82,7 +82,7 @@ public class PhysicalAttack extends Weapon implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString()+" Hp=" + Hp +
+        return " Hp=" + Hp +
                 ", Critical=" + Critical +
                 ", AttackSpeedWeapon=" + AttackSpeedWeapon +
                 ", CriticalDam=" + CriticalDam +

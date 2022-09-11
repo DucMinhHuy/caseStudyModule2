@@ -31,7 +31,6 @@ public class Weapon implements Serializable {
     @Override
     public String toString() {
         return "Name='" + Name + '\'' +
-                ", CoolDownReduction=" + CoolDownReduction +
-                '}';
+                ", CoolDownReduction=" + CoolDownReduction ;
     }
 }

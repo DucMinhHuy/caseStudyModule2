@@ -22,8 +22,8 @@ public class Marksman extends Hero implements Serializable {
         return 0;
     }
 
-    public Marksman(String name, int birthDay, double height, int hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double money, double lifeSteal, double acceleration, double armorPierce, double criticalChance, double criticalDamage) {
-        super(name, birthDay, height, hp, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
+    public Marksman(Object weapon,int id,String name, int birthDay, double height, int hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double money, double lifeSteal, double acceleration, double armorPierce, double criticalChance, double criticalDamage) {
+        super(weapon,id,name, birthDay, height, hp, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
         LifeSteal = lifeSteal;
         Acceleration = acceleration;
         ArmorPierce = armorPierce;

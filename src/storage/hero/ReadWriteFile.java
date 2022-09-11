@@ -3,7 +3,6 @@ package storage.hero;
 import model.Hero;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteFile implements ReadWriteData{

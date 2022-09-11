@@ -13,8 +13,8 @@ public class Warrior extends Hero implements Serializable {
 
     }
 
-    public Warrior(String name, int birthDay, double height, int hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double money, double criticalChance, double criticalDamage, double lifeSteal) {
-        super(name, birthDay, height, hp, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
+    public Warrior(Object weapon, int id, String name, int birthDay, double height, int hitPoint, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double criticalChance, double criticalDamage, double lifeSteal) {
+        super(weapon, id, name, birthDay, height, hitPoint, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
         CriticalChance = criticalChance;
         CriticalDamage = criticalDamage;
         this.lifeSteal = lifeSteal;

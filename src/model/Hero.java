@@ -3,6 +3,8 @@ package model;
 import java.io.Serializable;
 
 public abstract class Hero implements Serializable {
+    private Object Weapon;
+    private int id;
     private String Name;
     private int BirthDay;
     private double Height;
@@ -22,7 +24,27 @@ public abstract class Hero implements Serializable {
     public abstract void buy(double money);
     public abstract double add();
 
-    public Hero(String name, int birthDay, double height, int hitPoint, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp) {
+    public Hero(int id, String name, int birthDay, double height, int hitPoint, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp) {
+        this.id = id;
+        Name = name;
+        BirthDay = birthDay;
+        Height = height;
+        HitPoint = hitPoint;
+        BaseDamage = baseDamage;
+        CoolDown = coolDown;
+        Armor = armor;
+        MagicDefense = magicDefense;
+        Mana = mana;
+        MovementSpeed = movementSpeed;
+        AttackSpeed = attackSpeed;
+        CoolDownReduction = coolDownReduction;
+        HealPerSecondMana = healPerSecondMana;
+        HealPerSecondHp = healPerSecondHp;
+    }
+
+    public Hero(Object Weapon, int id, String name, int birthDay, double height, int hitPoint, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp) {
+       this.Weapon= Weapon;
+        this.id=id;
         Name = name;
         BirthDay = birthDay;
         Height = height;
@@ -81,6 +103,22 @@ public abstract class Hero implements Serializable {
         return baseDamage;
     }
 
+    public Object getWeapon() {
+        return Weapon;
+    }
+
+    public void setWeapon(Object weapon) {
+        Weapon = weapon;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public double getCoolDown() {
         return CoolDown;
     }
@@ -134,37 +172,32 @@ public abstract class Hero implements Serializable {
         return CoolDownReduction;
     }
 
-    public void setCoolDownReduction(double coolDownReduction) {
+    public double setCoolDownReduction(double coolDownReduction) {
         CoolDownReduction = coolDownReduction;
+        return coolDownReduction;
     }
 
     public double getHealPerSecondMana() {
         return HealPerSecondMana;
     }
 
-    public void setHealPerSecondMana(double healPerSecondMana) {
+    public double setHealPerSecondMana(double healPerSecondMana) {
         HealPerSecondMana = healPerSecondMana;
+        return healPerSecondMana;
     }
 
     public double getHealPerSecondHp() {
         return HealPerSecondHp;
     }
 
-    public void setHealPerSecondHp(double healPerSecondHp) {
+    public double setHealPerSecondHp(double healPerSecondHp) {
         HealPerSecondHp = healPerSecondHp;
+        return healPerSecondHp;
     }
-
-//    public double getMoney() {
-//        return Money;
-//    }
-
-//    public void setMoney(double money) {
-//        Money = money;
-//    }
-
     @Override
     public String toString() {
-        return "Name='" + Name + '\'' +
+        return "id="+id+
+                ", Name='" + Name + '\'' +
                 ", BirthDay=" + BirthDay +
                 ", Height=" + Height +
                 ", HitPoint=" + HitPoint +

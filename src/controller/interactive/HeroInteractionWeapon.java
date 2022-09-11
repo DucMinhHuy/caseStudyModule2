@@ -1,37 +1,43 @@
 package controller.interactive;
-import controller.ListHero;
-import model.hero.Assassin;
 import model.hero.describe.HeroDescription;
 import model.methods.*;
-import model.weapon.Movement;
-import model.weapon.PhysicalAttack;
 import model.weapon.describe.WeaponDescription;
 
 public class HeroInteractionWeapon implements IAttackSpeed, IAttack, ICoolDownReduction, IHealPerSecondHp,IHealPerSecondMana,ILifeSteads,ICriticalChance,ICriticalDamage {
-    private HeroDescription heroDescription =new HeroDescription(new Assassin(),0);
-    private WeaponDescription weaponDescription=new WeaponDescription(new PhysicalAttack(),new Movement(),0);
-    private ListHero listHero=new ListHero();
+    private HeroDescription heroDescription=new HeroDescription();
+    private WeaponDescription weaponDescription =new WeaponDescription();
 
-    public boolean buy(int Money,int money){
-        if(heroDescription.getMoney()+Money>=weaponDescription.getMoney()+money){
+    public HeroInteractionWeapon() {
+    }
+
+
+    public HeroInteractionWeapon(HeroDescription heroDescription, WeaponDescription weaponDescription) {
+        this.heroDescription = heroDescription;
+        this.weaponDescription = weaponDescription;
+    }
+
+    public boolean buy(){
+        if(heroDescription.getMoney()>=weaponDescription.getMoney()){
+            heroDescription.setMoney(heroDescription.getMoney()-weaponDescription.getMoney());
             return true;
-        }else System.out.println("không đủ tiền, kiếm thêm đi .");
-        return false;
+        }else
+            System.out.println("không đủ tiền, kiếm thêm đi .");
+             return false;
     }
 
     @Override
     public int attack(int normalAttack, int baseDam) {
-        if(buy(heroDescription.getMoney(),weaponDescription.getMoney())){
-            return heroDescription.getAssassin().setBaseDamage(normalAttack+baseDam);
-        }else {
-           return heroDescription.getAssassin().setBaseDamage(baseDam);
+        if(buy()){
+           return heroDescription.getAssassin().setBaseDamage(normalAttack+baseDam);
         }
+           return heroDescription.getAssassin().setBaseDamage(normalAttack);
+
     }
 
     @Override
     public double attackSpeed(double AttackSpeedWeapon, double AttackSpeed) {
-        if(buy(heroDescription.getMoney(),weaponDescription.getMoney())){
-          return heroDescription.getAssassin().setAttackSpeed(AttackSpeed+AttackSpeedWeapon);
+        if(buy()){
+          return heroDescription.getAssassin().setAttackSpeed(AttackSpeedWeapon+AttackSpeedWeapon*AttackSpeed/100);
 
         }else{
            return heroDescription.getAssassin().setAttackSpeed(AttackSpeed);
@@ -40,31 +46,77 @@ public class HeroInteractionWeapon implements IAttackSpeed, IAttack, ICoolDownRe
 
     @Override
     public double coolDownReduction(double CoolDownReduction, double coolDownReductionWeapon) {
-return 0;
+        if(buy()){
+            return heroDescription.getAssassin().setCoolDownReduction(CoolDownReduction+CoolDownReduction+coolDownReductionWeapon/100);
+
+        }else{
+            return heroDescription.getAssassin().setCoolDownReduction(CoolDownReduction);
+        }
     }
 
     @Override
     public double criticalChance(double Critical, double CriticalWeapon) {
-return 0;
+        if(buy()){
+            return heroDescription.getAssassin().setCriticalChance(Critical+Critical*CriticalWeapon/100);
+
+        }else{
+            return heroDescription.getAssassin().setCriticalChance(Critical);
+        }
     }
 
     @Override
     public double criticalDamage(double CriticalDam, double criticalDam) {
-return 0;
+        if(buy()){
+            return heroDescription.getAssassin().setCriticalDamage(CriticalDam+CriticalDam+criticalDam/100);
+
+        }else{
+            return heroDescription.getAssassin().setCriticalDamage(CriticalDam);
+        }
     }
 
     @Override
     public double healPerSecondHp(double HealPerSecondHp, double healPerSecondHp) {
-        return 0;
+        if(buy()){
+            return heroDescription.getAssassin().setHealPerSecondHp(HealPerSecondHp+healPerSecondHp);
+
+        }else{
+            return heroDescription.getAssassin().setHealPerSecondHp(HealPerSecondHp);
+        }
     }
 
     @Override
     public double healPerSecondMana(double HealPerSecondMana, double healPerSecondMana) {
-return 0;
+        if(buy()){
+            return heroDescription.getAssassin().setHealPerSecondMana(HealPerSecondMana+healPerSecondMana);
+
+        }else{
+            return heroDescription.getAssassin().setHealPerSecondMana(HealPerSecondMana);
+        }
     }
 
     @Override
     public double lifeSteads(double LifeSteadsWeapon, double LifeSteads) {
-return 0;
+        if(buy()){
+            return heroDescription.getAssassin().setLifeSteal(LifeSteads+LifeSteads*LifeSteadsWeapon/100);
+
+        }else{
+            return heroDescription.getAssassin().setLifeSteal(LifeSteads);
+        }
+    }
+
+    public HeroDescription getHeroDescription() {
+        return heroDescription;
+    }
+
+    public void setHeroDescription(HeroDescription heroDescription) {
+        this.heroDescription = heroDescription;
+    }
+
+    public WeaponDescription getWeaponDescription() {
+        return weaponDescription;
+    }
+
+    public void setWeaponDescription(WeaponDescription weaponDescription) {
+        this.weaponDescription = weaponDescription;
     }
 }

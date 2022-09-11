@@ -63,7 +63,8 @@ public Movement(){}
 
     @Override
     public String toString() {
-        return "ArmorWeapon=" + ArmorWeapon +
+        return  super.toString()+
+                ", ArmorWeapon=" + ArmorWeapon +
                 ", MagicDefensed=" + MagicDefensed +
                 ", MovementSpeed=" + MovementSpeed +
                 ", AbilityPowerWeapon=" + AbilityPowerWeapon +

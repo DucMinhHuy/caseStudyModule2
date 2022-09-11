@@ -20,8 +20,8 @@ public class Mage extends Hero implements Serializable {
         return 0;
     }
 
-    public Mage(String name, int birthDay, double height, int hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double money, int abilityPower, double magicPierce, double magicLifeSteal) {
-        super(name, birthDay, height, hp, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
+    public Mage(Object weapon,int id,String name, int birthDay, double height, int hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double money, int abilityPower, double magicPierce, double magicLifeSteal) {
+        super(weapon,id,name, birthDay, height, hp, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
         AbilityPower = abilityPower;
         MagicPierce = magicPierce;
         MagicLifeSteal = magicLifeSteal;

@@ -52,7 +52,7 @@ public class Support extends Weapon implements Serializable {
 
     @Override
     public String toString() {
-        return "Support{" +super.toString()+
+        return "Support{"+super.toString()+
                 "Hp=" + Hp +
                 ", MovementSpeed=" + MovementSpeed +
                 ", AbilityPowerWeapon=" + AbilityPowerWeapon +

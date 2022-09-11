@@ -1,7 +1,6 @@
 package model.hero;
 
 import model.Hero;
-import model.weapon.PhysicalAttack;
 
 import java.io.Serializable;
 
@@ -20,8 +19,15 @@ public class Assassin extends Hero implements Serializable {
         return 0;
     }
 
-    public Assassin(String name, int birthDay, double height, int hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double lifeSteal, double criticalChance, double criticalDamage) {
-        super(name, birthDay, height, hp, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
+    public Assassin(int id, String name, int birthDay, double height, int hitPoint, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double lifeSteal, double criticalChance, double criticalDamage) {
+        super(id, name, birthDay, height, hitPoint, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
+        LifeSteal = lifeSteal;
+        CriticalChance = criticalChance;
+        CriticalDamage = criticalDamage;
+    }
+
+    public Assassin(Object weapon, int id, String name, int birthDay, double height, int hp, int baseDamage, double coolDown, double armor, double magicDefense, int mana, double movementSpeed, double attackSpeed, double coolDownReduction, double healPerSecondMana, double healPerSecondHp, double lifeSteal, double criticalChance, double criticalDamage) {
+        super(weapon,id,name, birthDay, height, hp, baseDamage, coolDown, armor, magicDefense, mana, movementSpeed, attackSpeed, coolDownReduction, healPerSecondMana, healPerSecondHp);
         LifeSteal = lifeSteal;
         CriticalChance = criticalChance;
         CriticalDamage = criticalDamage;
@@ -31,24 +37,27 @@ public class Assassin extends Hero implements Serializable {
         return LifeSteal;
     }
 
-    public void setLifeSteal(double lifeSteal) {
+    public double setLifeSteal(double lifeSteal) {
         LifeSteal = lifeSteal;
+        return lifeSteal;
     }
 
     public double getCriticalChance() {
         return CriticalChance;
     }
 
-    public void setCriticalChance(double criticalChance) {
+    public double setCriticalChance(double criticalChance) {
         CriticalChance = criticalChance;
+        return criticalChance;
     }
 
     public double getCriticalDamage() {
         return CriticalDamage;
     }
 
-    public void setCriticalDamage(double criticalDamage) {
+    public double setCriticalDamage(double criticalDamage) {
         CriticalDamage = criticalDamage;
+        return criticalDamage;
     }
 
     @Override
