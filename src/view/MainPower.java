@@ -17,8 +17,8 @@ public class MainPower {
         ListHero listHero=new ListHero();
         ListWeapon listWeapon=new ListWeapon();
         HeroInteractionWeapon heroInteractionWeapon = new HeroInteractionWeapon(info,weaponDescription);
-        int luachon = 0;
-        int chose = 0;
+        int luachon,money,money1;
+        int chose;
         int baseDamage  = 0;
         int abilityPower = 0;
         int baseDamage1=0;
@@ -75,7 +75,7 @@ public class MainPower {
                                 System.out.println("nhap healPerSecondHp :");
                                 healPerSecondHp=sc.nextDouble();
                                 System.out.println("nhap money :");
-                                int money = sc.nextInt();
+                                money = sc.nextInt();
                                 System.out.println("nhap lifeSteal :");
                                 lifeSteal=sc.nextDouble();
                                 System.out.println("nhap criticalDamage :");
@@ -152,7 +152,7 @@ public class MainPower {
                                 System.out.println("nhap coolDownReduction :");
                                 coolDownReduction = sc.nextDouble();
                                 System.out.println("nhap money :");
-                                int money = sc.nextInt();
+                                money1 = sc.nextInt();
                                 System.out.println("nhap lifeSteal :");
                                 lifeSteal1 = sc.nextDouble();
                                 System.out.println("nhap criticalDamage :");
@@ -163,7 +163,7 @@ public class MainPower {
                                 criticalChance = sc.nextDouble();
                                 Movement movement = new Movement(name, coolDownReduction, armor, magicDefense, movementSpeed, abilityPower, attackSpeed1);
                                 PhysicalAttack physicalAttack = new PhysicalAttack(baseDamage1, hp, criticalChance, attackSpeed1, criticalDamage1, lifeSteal1);
-                                weaponDescription = new WeaponDescription(physicalAttack, movement, money);
+                                weaponDescription = new WeaponDescription(physicalAttack, movement, money1);
                                 listWeapon.addWeapon(weaponDescription);
                                 break;
                             case 2:
@@ -202,7 +202,7 @@ public class MainPower {
                     }while (chose!=0);
                     break;
                 case 3:
-                    System.out.println("dam="+heroInteractionWeapon.attack(baseDamage,baseDamage1)+", toc do danh/s="+heroInteractionWeapon.attackSpeed(attackSpeed1,attackSpeed)+",thoi gian hoi chieu="+heroInteractionWeapon.coolDownReduction(coolDownReduction,coolDownReduction1)+
+                    System.out.println(", toc do danh/s="+heroInteractionWeapon.attackSpeed(attackSpeed1,attackSpeed)+",thoi gian hoi chieu="+heroInteractionWeapon.coolDownReduction(coolDownReduction,coolDownReduction1)+
                             ",% sat thuong chi mang="+heroInteractionWeapon.criticalChance(criticalChance,criticalChance1)+
                             ",% chi mang "+heroInteractionWeapon.criticalDamage(criticalDamage,criticalDamage1)+
                             ",hoi hp/s="+heroInteractionWeapon.healPerSecondHp(healPerSecondHp,0)+
